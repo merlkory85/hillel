@@ -15,3 +15,9 @@ https://merlkory85.github.io/hillel/hw3_GreenShop/Registration.html
 
 посилання на репозиторій ДЗ-3
 https://github.com/merlkory85/hillel/tree/main/hw3_GreenShop
+
+посилання на робочу сторінку ДЗ-4
+https://merlkory85.github.io/hillel/hw5.1/Registration.html
+
+посилання на репозиторій ДЗ-4
+https://github.com/merlkory85/hillel/tree/main/hw5.1
