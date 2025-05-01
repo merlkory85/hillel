@@ -5,4 +5,4 @@ https://merlkory85.github.io/hillel/index.html
 https://github.com/merlkory85/goit-fe-course/tree/master/module_04
 
 
-merlkory85/hillel
+https://github.com/merlkory85/hillel/tree/main/hw1
