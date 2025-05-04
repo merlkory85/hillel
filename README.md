@@ -21,3 +21,9 @@ https://merlkory85.github.io/hillel/hw5.1/Registration.html
 
 посилання на репозиторій ДЗ-4
 https://github.com/merlkory85/hillel/tree/main/hw5.1
+
+посилання на робочу сторінку ДЗ-4
+https://merlkory85.github.io/hillel/hw5.1_Minions/index.html
+
+посилання на репозиторій ДЗ-4
+https://github.com/merlkory85/hillel/tree/main/hw5.1_Minions
