@@ -28,8 +28,8 @@ https://merlkory85.github.io/hillel/hw5.1_Minions/index.html
 посилання на репозиторій ДЗ-4
 https://github.com/merlkory85/hillel/tree/main/hw5.1_Minions
 
-посилання на робочу сторінку ДЗ-4
-https://merlkory85.github.io/hillel/hw5.1_Minions/index.html
+посилання на робочу сторінку ДЗ-6.1
+https://merlkory85.github.io/hillel/hw6_1-inline-block--practice/index.html
 
-посилання на репозиторій ДЗ-4
-https://github.com/merlkory85/hillel/tree/main/hw5.1_Minions
+посилання на репозиторій ДЗ-6.1
+https://github.com/merlkory85/hillel/tree/main/hw6_1-inline-block--practice
