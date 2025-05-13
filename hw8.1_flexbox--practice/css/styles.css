@@ -196,7 +196,7 @@
 
 .inner {
     padding-block-start: 50px;
-    padding-block-end: 50px;
+    padding-block-end: 82px;
 }
 
 .inner__body {
@@ -434,3 +434,27 @@
 }
 
 .sorting-menu__pagination-img {}
+
+/* OFFERING ============================================================ */
+.offering {
+    padding-block-start: 50px;
+    padding-block-end: 75px;
+}
+
+.offering__body {}
+
+.offering__list {}
+
+.offering__item {}
+
+.offering__item-img {}
+
+.offering__item-info {}
+
+.offering__item-title {}
+
+.offering_item-text {}
+
+.offering_item-link {}
+
+.offering_item-link--img {}
