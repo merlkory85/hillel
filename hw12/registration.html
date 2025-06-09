@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="./css/style.css" />
+  <title>Green shop</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <div class="action">
+        <a href="index.html" class="action__button">
+          <span></span>
+        </a>
+      </div>
+      <div class="actions">
+        <button type="button" class="actions__button">Login</button>
+
+        <span></span>
+
+        <button type="button" class="actions__button actions__button--primary">
+          Register
+        </button>
+      </div>
+
+      <form class="form" action="/submit">
+        <h3 class="form__title">Enter your email and password to register.</h3>
+        <div class="form__input-wrapper">
+          <input
+            class="form__input"
+            type="text"
+            name="Username"
+            id=""
+            placeholder="Username"
+            required
+          />
+        </div>
+
+        <div class="form__input-wrapper">
+          <input
+            class="form__input"
+            type="email"
+            name="email"
+            id=""
+            placeholder="Enter your email address"
+            required
+          />
+        </div>
+        <div class="form__input-wrapper wrapper-input--secondary">
+          <input
+            class="form__input"
+            type="password"
+            name="password"
+            id=""
+            placeholder="Password"
+          />
+          <i class="bx bxs-hide"></i>
+        </div>
+        <div class="form__input-wrapper">
+          <input
+            class="form__input"
+            type="password"
+            name="password"
+            id=""
+            placeholder="Confirm Password"
+          />
+        </div>
+        <button class="form__button" type="submit">Register</button>
+      </form>
+      <div class="sup-title">
+        <span>Or register with</span>
+      </div>
+
+      <div class="actions__links">
+        <a class="actions__link" href="#">
+          <img src="./img/google 1.png" alt="google icon" />Continue with
+          Google</a
+        >
+        <a class="actions__link" href="#"
+          ><img src="./img/facebook 1.png" alt="facebook icon" />Continue with Facebook</a
+        >
+      </div>
+    </div>
+    <div class="footer__line"></div>
+  </div>
+</body>
