@@ -1,0 +1,178 @@
+@import "../variables";
+@import "../mixins";
+
+.magic {
+    position: relative;
+    padding: 360px 0px 60px 0px;
+    background-image: url("../img/magic-background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    // z-index: 2;
+    // .magic__body
+
+    &__body {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(3, auto);
+        align-items: end;
+        justify-content: space-between;
+        gap: 40px 20px;
+        grid-template-areas:
+            "sup-title timer"
+            "title timer"
+            "btn timer";
+
+        @include _600 {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(4, auto);
+            gap: 30px 0px;
+            grid-template-areas:
+                "sup-title"
+                "title"
+                "timer"
+                "btn";
+        }
+    }
+
+    // .magic__sup-title
+
+    &__sup-title {
+        grid-area: sup-title;
+        position: relative;
+        z-index: 5;
+        display: flex;
+        align-items: center;
+        column-gap: 12px;
+        max-width: 151px;
+        padding: 10px 20px;
+        border-radius: 20px;
+        background-color: $background-color_1;
+    }
+
+    // .magic__title
+
+    &__title {
+        grid-area: title;
+        position: relative;
+        z-index: 5;
+        @include font-work-sans(51px, $main-color-text, 600, 1.1);
+
+        @include _979 {
+            @include font-work-sans(38px, $main-color-text, 600, 1.2);
+        }
+    }
+
+    // .magic__btn-box
+
+    &__btn-box {
+        grid-area: btn;
+        position: relative;
+        z-index: 5;
+    }
+
+    // .magic__btn
+
+    &__btn {
+        background-color: $main-color-text;
+        color: $main-color;
+
+        @include _600 {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+    }
+}
+
+.overlay {
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #a259ff00;
+    background: linear-gradient(180deg, rgba(162, 89, 255, 0) 0%, rgba(162, 89, 255, 1) 100%);
+}
+.sup-title {
+    // .sup-title__img-inner
+
+    &__img-inner {
+        height: 24px;
+        width: 24px;
+    }
+
+    // .sup-title__name
+
+    &__name {
+        @include font-work-sans(16, $main-color-text, 400, 1.4);
+    }
+}
+
+.magic-timer {
+    // .magic-timer__wrap
+
+    &__wrap {
+        grid-area: timer;
+        position: relative;
+        z-index: 5;
+        display: flex;
+        flex-direction: column;
+        max-height: 144px;
+        max-width: 295px;
+        background-color: $background-color_1;
+        border-radius: 20px;
+        padding: 30px;
+
+        @include _600{
+            display: block;
+            max-width: 100%;
+        }
+    }
+
+    // .magic-timer__title
+
+    &__title {
+        @include font-space-mono(12px, $main-color-text, 400, 1.1);
+        margin-bottom: 10px;
+    }
+
+    // .magic-timer__list
+
+    &__list {
+        display: flex;
+        align-items: center;
+        column-gap: 38px;
+    }
+
+    // .magic-timer__item
+
+    &__item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        row-gap: 5px;
+    }
+
+    // .magic-timer__number
+
+    &__number {
+        @include font-space-mono(38px, $main-color-text, 700, 1.2);
+    }
+
+    // .magic-timer__time
+
+    &__time {
+        @include font-space-mono(12px, $main-color-text, 400, 1.1);
+    }
+
+    &__doted--1,
+    &__doted--2 {
+        @include font-space-mono(28px, $main-color-text, 700, 1.4);
+        position: absolute;
+        top: 0px;
+        left: 58px;
+    }
+}

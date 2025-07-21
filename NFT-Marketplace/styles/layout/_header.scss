@@ -1,0 +1,73 @@
+@import "../variables";
+@import "../mixins";
+
+.header {
+    // .header__body
+
+    &__body {
+        @include d-flex($justify: space-between, $align: center);
+        padding: 20px 0;
+
+        @include _600 {
+            padding: 15px 0;
+        }
+    }
+
+    // .header__nav
+
+    &__nav {
+        @include d-flex(space-between, center, $col-gap: 10px);
+    }
+}
+
+.logo {
+    position: relative;
+    z-index: 3;
+
+    @include _979 {
+        padding: 14px 0;
+    }
+}
+
+.open-menu .menu {
+    left: 0;
+    transition: all 0.9s;
+}
+
+.nav-header {
+    &__btn {
+    }
+    // .nav-header__list
+
+    &__list {
+        @include d-flex(space-between, center, $col-gap: 10px);
+    }
+
+    // .nav-header__link
+
+    &__link {
+        padding: 12px 20px;
+        @include font-work-sans(16px, #ffffff, 600, 1.4);
+        transition: all 0.3s;
+
+        &:hover {
+            color: $background-color_2;
+        }
+    }
+}
+
+@include _979 {
+    .menu {
+        position: fixed;
+        top: 0;
+        left: -150%;
+        width: 320px;
+        height: 100%;
+        background-color: $background-color_1;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+        opacity: 0.95;
+        backdrop-filter: blur(3px);
+        @include d-flex(center, center, $flex-di: column, $row-gap: 35px);
+        transition: all 0.5s ease-in-out;
+    }
+}

@@ -1,0 +1,187 @@
+@import "../variables";
+@import "../mixins";
+
+.works {
+    padding: 80px 0;
+
+    @include _600 {
+        padding: 40px 0;
+    }
+    // .works__body
+
+    &__body {
+    }
+
+    // .works__title
+
+    &__title {
+        @include font-work-sans(38px, $main-color-text, 600, 1.2);
+        margin-bottom: 10px;
+
+        @include _979 {
+            @include font-work-sans(28px, $main-color-text, 600, 1.4);
+        }
+    }
+
+    // .works__subtitle
+
+    &__subtitle {
+        @include font-work-sans(22px, $main-color-text, 400, 1.6);
+        margin-bottom: 48px;
+
+        @include _979 {
+            @include font-work-sans(16px, $main-color-text, 400, 1.4);
+            margin-bottom: 40px;
+        }
+    }
+
+    // .works__list
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        gap: 20px 25px;
+        grid-auto-flow: row;
+        grid-template-areas: "item-1 item-2 item-3";
+
+        @include _600 {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, 1fr);
+            gap: 20px 0px;
+            grid-template-areas:
+                " item-1"
+                " item-2"
+                "item-3";
+        }
+    }
+
+    // .works__item
+
+    &__item {
+        padding: 10px 30px 30px 30px;
+        background-color: $background-color_1;
+        border-radius: 20px;
+
+        @include _979 {
+            padding: 10px 25px 30px 25px;
+        }
+
+        @include _600 {
+            padding: 20px;
+        }
+    }
+
+    &--1 {
+        grid-area: item-1;
+    }
+
+    &--2 {
+        grid-area: item-2;
+    }
+
+    &--3 {
+        grid-area: item-3;
+    }
+
+    // .works__link
+
+    &__link {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: $main-color-text;
+
+        @include _600 {
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            grid-template-rows: 1fr;
+            justify-content: start;
+            gap: 0px 20px;
+            grid-auto-flow: row;
+            grid-template-areas: "works-card__img-inner works-card__info-inner";
+
+            .works-card__img-inner {
+                grid-area: works-card__img-inner;
+            }
+
+            .works-card__info-inner {
+                grid-area: works-card__info-inner;
+            }
+        }
+    }
+}
+
+.works-title {
+    // .works-title__box
+
+    &__box {
+    }
+}
+.works-card {
+    // .works-card__img-inner
+
+    &__img-inner {
+        margin-bottom: 20px;
+
+        @include _600 {
+            height: 100px;
+            width: 100px;
+            margin-bottom: 0;
+        }
+    }
+
+    // .works-card__img
+
+    &__img {
+        height: 250px;
+        width: 250px;
+
+        @include _979 {
+            height: 160px;
+            width: 160px;
+        }
+
+        @include _600 {
+            height: 100px;
+            width: 100px;
+        }
+    }
+
+    // .works-card__info-inner
+
+    &__info-inner {
+        text-align: center;
+    }
+
+    // .works-card__title
+
+    &__title {
+        @include font-work-sans(22px, $main-color-text, 600, 1.4);
+        margin-bottom: 10px;
+
+        @include _979 {
+            @include font-work-sans(16px, $main-color-text, 600, 1.4);
+        }
+
+        @include _600 {
+            text-align: left;
+        }
+    }
+
+    // .works-card__desc
+
+    &__desc {
+        @include font-work-sans(16px, $main-color-text, 400, 1.4);
+
+        @include _979 {
+            @include font-work-sans(12px, $main-color-text, 400, 1.4);
+        }
+
+        @include _600 {
+            text-align: left;
+        }
+    }
+}

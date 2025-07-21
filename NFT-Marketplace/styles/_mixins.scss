@@ -1,0 +1,121 @@
+@mixin container($max-width: 1080px) {
+    max-width: $max-width;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+@mixin font-space-mono($size: false, $color: false, $weight: false, $lh: false) {
+    font-family: "Space Mono", monospace;
+    @if $size {
+        font-size: $size;
+    }
+    @if $color {
+        color: $color;
+    }
+    @if $weight {
+        font-weight: $weight;
+    }
+    @if $lh {
+        line-height: $lh;
+    }
+}
+
+@mixin font-work-sans($size: false, $color: false, $weight: false, $lh: false) {
+    font-family: "Work Sans", sans-serif;
+    @if $size {
+        font-size: $size;
+    }
+    @if $color {
+        color: $color;
+    }
+    @if $weight {
+        font-weight: $weight;
+    }
+    @if $lh {
+        line-height: $lh;
+    }
+}
+
+@mixin btn($right: 39px, $left: 30px, $bgc: #a259ff) {
+    padding-top: 19px;
+    padding-right: $right;
+    padding-bottom: 19px;
+    padding-left: $left;
+    background-color: $bgc;
+    border-radius: 20px;
+}
+
+@mixin d-flex($justify: start, $align: stretch, $wrap: nowrap, $flex-di: row, $col-gap: 0px, $row-gap: 0px) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-wrap: $wrap;
+    flex-direction: $flex-di;
+    column-gap: $col-gap;
+    row-gap: $row-gap;
+}
+
+@mixin border-radius($radius: 20px) {
+    border-radius: $radius;
+}
+
+@mixin _1170 {
+    @media (max-width: 1170px) {
+        @content;
+    }
+}
+
+@mixin _979 {
+    @media (max-width: 979px) {
+        @content;
+    }
+}
+@mixin _768 {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+@mixin _600 {
+    @media (max-width: 600px) {
+        @content;
+    }
+}
+@mixin _480 {
+    @media (max-width: 480px) {
+        @content;
+    }
+}
+@mixin _350 {
+    @media (max-width: 350px) {
+        @content;
+    }
+}
+
+@mixin pseudo-element($content: "", $display: flex, $pos: absolute) {
+    content: $content;
+    display: $display;
+    position: $pos;
+}
+
+@mixin placeholder($color, $size, $weight) {
+    &::-webkit-input-placeholder {
+        color: $color;
+        font-size: $size;
+        font-weight: $weight;
+    }
+    &:-moz-placeholder {
+        color: $color;
+        font-size: $size;
+        font-weight: $weight;
+    }
+    &::-moz-placeholder {
+        color: $color;
+        font-size: $size;
+        font-weight: $weight;
+    }
+    &:-ms-input-placeholder {
+        color: $color;
+        font-size: $size;
+        font-weight: $weight;
+    }
+}

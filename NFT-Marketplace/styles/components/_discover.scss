@@ -1,0 +1,239 @@
+@import "../variables";
+@import "../mixins";
+
+.discover {
+    padding: 80px 0;
+
+    @include _979 {
+        padding: 40px 0;
+    }
+    // .discover__body
+
+    &__body {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, auto);
+        gap: 60px 30px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "title btn"
+            "list list"
+            "list list"
+            "list list"
+            "list list"
+            "list list";
+
+        @include _979 {
+            display: grid;
+            gap: 40px 30px;
+        }
+
+        @include _600 {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, auto);
+            gap: 40px 30px;
+            grid-auto-flow: row;
+            grid-template-areas:
+                "title"
+                "list"
+                "btn";
+        }
+    }
+
+    // .discover__title
+
+    &__title {
+        @include font-work-sans(38px, $main-color-text, 600, 1.2);
+        margin-bottom: 10px;
+
+        @include _979 {
+            @include font-work-sans(28px, $main-color-text, 600, 1.4);
+        }
+    }
+
+    // .discover__subtitle
+
+    &__subtitle {
+        @include font-work-sans(22px, $main-color-text, 400, 1.6);
+
+        @include _979 {
+            @include font-work-sans(16px, $main-color-text, 400, 1.4);
+        }
+    }
+
+    // .discover__btn-box
+
+    &__btn-box {
+        grid-area: btn;
+        display: flex;
+        justify-content: end;
+        align-items: end;
+
+        @include _600 {
+            display: flex;
+            flex: 1 1 auto;
+        }
+    }
+
+    // .discover__btn
+
+    &__btn {
+        @include _600 {
+            width: 100%;
+        }
+    }
+
+    // .discover__list
+
+    &__list {
+        grid-area: list;
+        display: flex;
+        justify-content: space-between;
+        column-gap: 30px;
+        row-gap: 20px;
+
+        @include _600 {
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 20px;
+        }
+    }
+
+    // .discover__item
+
+    &__item {
+        cursor: pointer;
+
+        @include _979 {
+            display: flex;
+            flex-direction: column;
+            column-gap: 30px;
+            flex: 1 1 auto;
+
+            &:nth-child(n + 3) {
+                display: none;
+            }
+        }
+
+        @include _600 {
+            &:nth-child(n + 3) {
+                display: block;
+            }
+        }
+    }
+}
+.discover-title {
+    // .discover-title__box
+
+    &__box {
+        grid-area: title;
+    }
+}
+
+.item-discover {
+    // .item-discover__img-box
+
+    &__img-box {
+    }
+
+    // .item-discover__img
+
+    &__img {
+        height: 100%;
+        width: 100%;
+    }
+
+    // .item-discover__info-box
+
+    &__info-box {
+        background-color: $background-color_1;
+        padding: 20px 30px 25px 30px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+
+        @include _600 {
+            padding: 20px 20px 25px 20px;
+        }
+    }
+
+    // .item-discover__info-title
+
+    &__info-title {
+        @include font-work-sans(22px, $main-color-text, 600, 1.4);
+        margin-bottom: 5px;
+    }
+
+    // .item-discover__description-box
+
+    &__description-box {
+        @include d-flex($justify: start, $align: center, $wrap: nowrap, $flex-di: row, $col-gap: 12px, $row-gap: 0px);
+        margin-bottom: 25px;
+    }
+
+    // .item-discover__description-img-inner
+
+    &__description-img-inner {
+    }
+
+    // .item-discover__description-img
+
+    &__description-img {
+    }
+
+    // .item-discover__description-name
+
+    &__description-name {
+        @include font-space-mono(16px, $main-color-text, 400, 1.4);
+    }
+
+    // .item-discover__price-box
+
+    &__price-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    // .item-discover__price-inner
+
+    &__price-inner {
+    }
+
+    // .item-discover__price-title
+
+    &__price-title {
+        display: block;
+        @include font-space-mono(12px, $text-color_2, 400, 1.1);
+        margin-bottom: 8px;
+    }
+
+    // .item-discover__price-count
+
+    &__price-count {
+        font-size: 0;
+    }
+
+    // .item-discover__price-count--number
+
+    &__price-count--number,
+    &__price-count--symbol,
+    &__price-count--coins {
+        @include font-space-mono(16px, $main-color-text, 400, 1.4);
+
+        @include _600 {
+            @include font-space-mono(12px, $main-color-text, 400, 1.1);
+        }
+    }
+
+    // .item-discover__price-count--symbol
+
+    // &__price-count--symbol {
+    // }
+
+    // .item-discover__price-count--coins
+
+    &__price-count--coins {
+        margin-left: 8px;
+    }
+}

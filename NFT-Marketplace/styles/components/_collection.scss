@@ -1,0 +1,189 @@
+@import "../variables";
+@import "../mixins";
+
+.collection {
+    padding: 80px 0;
+
+    @include _768 {
+        padding: 40px 0;
+    }
+
+    // .collection__title
+
+    &__title {
+        @include font-work-sans(38px, $main-color-text, 600, 1.2);
+        margin-bottom: 10px;
+
+        @include _768 {
+            @include font-work-sans($size: 28px, $lh: 1.4);
+        }
+    }
+
+    // .collection__subtitle
+
+    &__subtitle {
+        @include font-work-sans(22px, $main-color-text, 400, 1.6);
+        margin-bottom: 60px;
+
+        @include _768 {
+            @include font-work-sans($size: 16px, $lh: 1.4);
+            margin-bottom: 40px;
+        }
+    }
+
+    // .collection__list
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        gap: 0px 30px;
+        grid-template-areas: "card-1 card-2 card-3";
+        cursor: pointer;
+
+        @include _979 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1fr;
+            gap: 0px 30px;
+            grid-template-areas: "card-1 card-2";
+        }
+
+         @include _768 {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            grid-template-areas: "card-1";
+        }
+    }
+
+    .card-1 {
+        grid-area: card-1;
+    }
+    .card-2 {
+        grid-area: card-2;
+    }
+    .card-3 {
+        grid-area: card-3;
+    }
+
+    // .collection__item
+
+    &__item {
+        @include d-flex($justify: space-between, $wrap: wrap, $flex-di: column, $col-gap: 0px, $row-gap: 15px);
+
+        @include _979 {
+            &:nth-child(n + 3) {
+                display: none;
+            }
+        }
+
+        @include _768 {
+            &:nth-child(n + 2) {
+                display: none;
+            }
+        }
+    }
+}
+
+.collection-card {
+    // .collection-card__box-primary
+
+    &__box-primary {
+        max-width: 100%;
+        width: 100%;
+    }
+
+     &__box-primary img {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    // .collection-card__box-secondary
+
+    &__box-secondary {
+        @include d-flex(
+            $justify: space-between,
+            $align: center,
+            $wrap: wrap,
+            $flex-di: row,
+            $col-gap: 15px,
+            $row-gap: 15px
+        );
+    }
+
+    // .collection-card__title
+
+    &__title {
+        @include font-work-sans(22px, $main-color-text, 600, 1.4);
+        margin-bottom: 10px;
+    }
+
+    // .collection-card__desc-box
+
+    &__desc-box {
+        @include d-flex($align: center, $col-gap: 12px);
+    }
+
+    // .collection-card__desc-img
+
+    &__desc-img {
+        height: 24px;
+        width: 24px;
+    }
+
+    // .collection-card__desc-text
+
+    &__desc-text {
+        @include font-work-sans(16px, $main-color-text, 400, 1.4);
+    }
+}
+
+.secondary-box__avatar {
+    position: relative;
+    z-index: 1;
+    height: 95px;
+    width: 95px;
+
+    &:hover .overlay-avatar {
+        opacity: 1;
+    }
+
+    @include _600 {
+        height: 90px;
+        width: 90px;
+    }
+
+     @include _480 {
+        height: 75px;
+        width: 75px;
+    }
+}
+
+.overlay-avatar {
+    @include pseudo-element;
+    @include d-flex($justify: center, $align: center);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    opacity: 0;
+    font-size: 0px;
+    background-color: $background-color_2;
+    // .overlay-avatar__count
+    border-radius: 20px;
+    transition: all 0.4s;
+
+    &__count {
+        @include font-space-mono(22px, $main-color-text, 700, $lh: 1.6);
+    }
+
+    // .overlay-avatar__symbol
+
+    &__symbol {
+        @include font-space-mono(22px, $main-color-text, 700, $lh: 1.6);
+    }
+}

@@ -1,0 +1,295 @@
+.creators {
+    padding: 80px 0;
+
+    @include _979 {
+        padding: 40px 0;
+    }
+
+    // .creators__body
+
+    &__body {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(6, auto);
+        gap: 60px 60px;
+
+        grid-auto-flow: row;
+        grid-template-areas:
+            "creators__title-wrapper creators__title-wrapper  creators__btn-box creators__btn-box"
+            "creators__list creators__list creators__list creators__list"
+            "creators__list creators__list creators__list creators__list"
+            "creators__list creators__list creators__list creators__list"
+            "creators__list creators__list creators__list creators__list"
+            "creators__list creators__list creators__list creators__list";
+
+        @include _979 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(3, auto);
+            gap: 40px 0px;
+            grid-template-areas:
+                "creators__title-wrapper creators__btn-box"
+                "creators__list creators__list"
+                "creators__list creators__list"
+                "creators__list creators__list";
+        }
+
+        @include _600 {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, auto);
+            gap: 40px 0px;
+            grid-template-areas:
+                "creators__title-wrapper"
+                "creators__list"
+                "creators__btn-box";
+        }
+    }
+
+    // .creators__title-wrapper
+
+    &__title-wrapper {
+        grid-area: creators__title-wrapper;
+
+        @include _600 {
+            max-width: 315px;
+        }
+    }
+
+    // .creators__title
+
+    &__title {
+        @include font-work-sans(38px, $main-color-text, 600, 1.2);
+        margin-bottom: 10px;
+
+        @include _979 {
+            @include font-work-sans(28px, $main-color-text, 600, 1.4);
+        }
+    }
+
+    // .creators__subtitle
+
+    &__subtitle {
+        @include font-work-sans(22px, $main-color-text, 400, 1.6);
+
+        @include _979 {
+            @include font-work-sans(16px, $main-color-text, 400, 1.4);
+        }
+    }
+
+    &__btn-box {
+        grid-area: creators__btn-box;
+        display: flex;
+        justify-content: end;
+        align-items: end;
+
+        @include _600 {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .creators__btn {
+        padding: 19px 50px;
+    }
+
+    // .creators__list
+
+    &__list {
+        grid-area: creators__list;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: minmax(3, 1fr);
+        gap: 30px 30px;
+        grid-template-areas:
+            "item-1 item-2 item-3 item-4"
+            "item-5 item-6 item-7 item-8"
+            "item-9 item-10 item-11 item-12";
+
+        @include _979 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 30px 30px;
+            grid-template-areas:
+                "item-1 item-2"
+                "item-3 item-4"
+                "item-5 item-6";
+
+            :nth-child(n + 7) {
+                display: none;
+            }
+        }
+
+         @include _600 {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            gap: 30px 30px;
+            grid-template-areas:
+                "item-1"
+                "item-2"
+                "item-3"
+                "item-4"
+                "item-5";
+
+            :nth-child(n + 6) {
+                display: none;
+            }
+        }
+    }
+
+    .item-1 {
+        grid-area: item-1;
+    }
+    .item-2 {
+        grid-area: item-2;
+    }
+    .item-3 {
+        grid-area: item-3;
+    }
+    .item-4 {
+        grid-area: item-4;
+    }
+    .item-5 {
+        grid-area: item-5;
+    }
+    .item-6 {
+        grid-area: item-6;
+    }
+    .item-7 {
+        grid-area: item-7;
+    }
+    .item-8 {
+        grid-area: item-8;
+    }
+    .item-9 {
+        grid-area: item-9;
+    }
+    .item-10 {
+        grid-area: item-10;
+    }
+    .item-11 {
+        grid-area: item-11;
+    }
+    .item-12 {
+        grid-area: item-12;
+    }
+
+    // .creators__item
+
+    &__item {
+    }
+
+    // .creators__link
+
+    &__link {
+        position: relative;
+        z-index: 1;
+        @include d-flex($justify: center, $align: center, $wrap: nowrap, $flex-di: column);
+        padding: 20px;
+        border-radius: $border-radius;
+        background-color: $background-color_1;
+        transition: all 0.3s;
+
+        @include _979 {
+            display: grid;
+            justify-content: start;
+            grid-template-columns: repeat(2, auto);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 5px 20px;
+            grid-auto-flow: row;
+            grid-template-areas:
+                "creators__img-box creators__sub-title"
+                "creators__img-box creators__sales-box";
+        }
+
+        &:hover {
+            background-color: $text-color_2;
+        }
+
+        &:hover .sales__text {
+            color: $main-color-text;
+        }
+    }
+
+    // .creators__number
+
+    &__number {
+        position: absolute;
+        top: 18px;
+        left: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $text-color_2;
+        background-color: $main-color;
+        border-radius: $border-radius;
+        height: 30px;
+        width: 30px;
+
+        @include _979 {
+            top: 13px;
+            left: 12px;
+        }
+    }
+
+    &__sub-title {
+        grid-area: creators__sub-title;
+        @include font-work-sans(22px, $main-color-text, 600, 1.4);
+        margin-bottom: 5px;
+
+        @include _979 {
+            display: flex;
+            margin-bottom: -5px;
+        }
+    }
+
+    // .creators__img-box
+
+    &__img-box {
+        grid-area: creators__img-box;
+        margin-bottom: 20px;
+
+        @include _979 {
+            height: 60px;
+            width: 60px;
+            margin-bottom: 0;
+        }
+    }
+
+    // .creators__sales-box
+
+    &__sales-box {
+        grid-area: creators__sales-box;
+        font-size: 0;
+    }
+}
+
+.sales {
+    // .sales__box
+
+    &__box {
+    }
+
+    // .sales__text
+
+    &__text {
+        @include font-work-sans(16px, $text-color_2, 400, 1.4);
+        margin-right: 10px;
+        transition: all 0.3s;
+    }
+
+    // .sales__count
+
+    &__count {
+        @include font-space-mono(16px, $main-color-text, 400, 1.4);
+    }
+
+    // .sales__coins
+
+    &__coins {
+        @include font-space-mono(16px, $main-color-text, 400, 1.4);
+        margin-left: 10px;
+    }
+}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <title>Create Account</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container-xl">
+          <div class="header__body">
+            <a href="#" class="logo__wrap">
+              <picture>
+                <source media="(min-width: 768px)" srcset="./img/logo-large.png" />
+                <source media="(max-width: 767px)" srcset="./img/logo-small.png" />
+                <img src="./img/logo-large.png" alt="logo" class="logo" />
+              </picture>
+            </a>
+
+            <div class="header__nav nav-header">
+              <div class="nav-header__burger icon-menu">
+                <span class="burger short-top"></span>
+                <span class="burger long"></span>
+                <span class="burger short-bottom"></span>
+              </div>
+
+              <ul class="nav-header__list menu">
+                <li class="nav-header__item">
+                  <a href="#" class="nav-header__link">Marketplace</a>
+                </li>
+
+                <li class="nav-header__item">
+                  <a href="#" class="nav-header__link">Rankings</a>
+                </li>
+
+                <li class="nav-header__item">
+                  <a href="#" class="nav-header__link">Connect a wallet</a>
+                </li>
+
+                <button class="nav-header__btn btn" onclick="location.href='index.html'">
+                  <svg class="icon-user">
+                    <use xlink:href="./sprite.svg#User"></use>
+                  </svg>
+                  <span>Sign Up</span>
+                </button>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="main">
+        <div class="container">
+          <h1 class="title">Create Account</h1>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__top">
+            <div class="footer__top-body">
+              <div class="footer__top-logo footer-logo logo">
+                <a href="#" class="logo__wrap-footer">
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="./img/logo-large.png" />
+                    <source media="(max-width: 767px)" srcset="./img/logo-small.png" />
+                    <img src="./img/logo-large.png" alt="logo" class="logo" />
+                  </picture>
+                </a>
+
+                <p class="footer-logo__created">NFT marketplace UI created with Anima for Figma.</p>
+
+                <span class="footer-logo__community">Join our community</span>
+
+                <ul class="footer-logo__list">
+                  <li class="footer-logo__item">
+                    <a href="#" class="footer-logo__link">
+                      <svg class="icon-discord">
+                        <use xlink:href="./sprite.svg#DiscordLogo"></use>
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li class="footer-logo__item">
+                    <a href="#" class="footer-logo__link">
+                      <svg class="icon-youtube">
+                        <use xlink:href="./sprite.svg#YoutubeLogo"></use>
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li class="footer-logo__item">
+                    <a href="#" class="footer-logo__link">
+                      <svg class="icon-twitter">
+                        <use xlink:href="./sprite.svg#TwitterLogo"></use>
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li class="footer-logo__item">
+                    <a href="#" class="footer-logo__link">
+                      <svg class="icon-insta">
+                        <use xlink:href="./sprite.svg#InstagramLogo"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="footer__top-explore explore">
+                <h4 class="explore__title">Explore</h4>
+
+                <ul class="explore__list">
+                  <li class="explore__item">
+                    <a href="#" class="explore__link">Marketplace</a>
+                  </li>
+
+                  <li class="explore__item">
+                    <a href="#" class="explore__link">Rankings</a>
+                  </li>
+
+                  <li class="explore__item">
+                    <a href="#" class="explore__link">Connect a wallet</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="footer__top-digest">
+                <h4 class="footer__top-digest-title">Join Our Weekly Digest</h4>
+
+                <p class="footer__top-digest-info">Get exclusive promotions & updates straight to your inbox.</p>
+
+                <form action="" method="get" class="footer__top-digest-form">
+                  <input type="email" name="" id="" placeholder="Enter your email here" class="digest__info-input">
+                  <button class="digest__info-btn btn footer-btn">
+                    <svg class="icon-email footer-email">
+                      <use xlink:href="sprite.svg#EnvelopeSimple"></use>
+                    </svg>
+                    <span class="digest__info-btn-text">Subscribe</span>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer__botom">
+            <div class="footer__botom-body">
+              <p class="footer__botom-info">Ⓒ NFT Market. Use this template freely.</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+
+</html>

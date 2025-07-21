@@ -1,0 +1,34 @@
+@use "variables" as v;
+@import "mixins";
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    line-height: 1;
+    font-size: 16px;
+    font-family: "Space Mono", monospace;
+    font-family: "Work Sans", sans-serif;
+    color: v.$main-color-text;
+    background-color: v.$main-color;
+}
+
+.wrapper {
+    min-height: 100%;
+    @include d-flex($flex-di: column);
+}
+
+.main {
+    flex: 1 1 auto;
+}
+
+.container-xl {
+    @include container(1210px);
+}
+
+.container {
+    @include container(1080px);
+}

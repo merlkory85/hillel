@@ -1,0 +1,193 @@
+@import "../variables";
+@import "../mixins";
+
+.hero {
+    padding: 80px 0;
+
+    @include _600 {
+        padding: 40px 0;
+    }
+    // .hero__body
+
+    &__body {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, auto);
+        gap: 0px 40px;
+        grid-template-areas:
+            "info-hero__title-box img-hero"
+            "info-hero__desc-box img-hero"
+            "info-hero__btn img-hero"
+            "info-hero__list img-hero";
+
+        @include _600 {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr, 1fr, 1fr, 1fr, 1fr;
+            grid-template-areas:
+                "info-hero__title-box"
+                "info-hero__desc-box"
+                "img-hero"
+                "info-hero__btn"
+                "info-hero__list";
+        }
+
+        @include _600 {
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: auto, auto, auto, auto, auto;
+        }
+    }
+}
+
+.info-hero {
+    // .info-hero__title
+
+    &__title {
+        grid-area: info-hero__title;
+        @include font-work-sans(67px, $main-color-text, 600, 1.1);
+        padding-right: 80px;
+        margin-bottom: 20px;
+
+        @include _979 {
+            @include font-work-sans($size: 38px, $lh: 1.2);
+            padding-right: 120px;
+        }
+
+        @include _768 {
+            @include font-work-sans($size: 38px, $lh: 1.2);
+            max-width: 100%;
+            padding-right: 0;
+        }
+
+        @include _600 {
+            @include font-work-sans($size: 28px, $lh: 1.4);
+            margin-bottom: 10px;
+        }
+    }
+
+    // .info-hero__desc
+
+    &__desc {
+        grid-area: info-hero__desc;
+        @include font-work-sans(22px, $main-color-text, 400, 1.6);
+        margin-bottom: 30px;
+
+        @include _979 {
+            @include font-work-sans($size: 16px, $lh: 1.4);
+        }
+
+        @include _768 {
+            max-width: 100%;
+        }
+
+        @include _600 {
+            @include font-work-sans($size: 16px, $lh: 1.4);
+            margin-bottom: 40px;
+        }
+    }
+
+    // .info-hero__btn
+
+    &__btn {
+        grid-area: info-hero__btn;
+        display: flex;
+        padding: 19px 50px;
+        margin-bottom: 30px;
+
+        @include _600 {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+
+    // .info-hero__list
+
+    &__list {
+        grid-area: info-hero__list;
+        @include d-flex($align: center, $col-gap: 30px);
+
+        @include _768 {
+            max-width: 100%;
+        }
+    }
+
+    // .info-hero__item
+
+    &__item {
+        @include d-flex($justify: start, $align: center, $wrap: nowrap, $flex-di: column, $col-gap: 30px);
+        font-size: 0;
+        padding-right: 40px;
+
+        @include _979 {
+            padding-right: 15px;
+        }
+    }
+}
+
+.hero-count {
+    // .hero-count__box
+
+    &__box {
+        width: 100%;
+        display: flex;
+    }
+
+    // .hero-count__numeric
+
+    &__numeric,
+    &__quantity,
+    &__plus {
+        @include font-space-mono(28px, $main-color-text, 700, 1.4);
+
+        @include _768 {
+            @include font-space-mono($size: 22px, $lh: 1.6);
+        }
+    }
+
+    &__text {
+        @include font-work-sans(24px, $main-color-text, 400, 1.6);
+
+        @include _979 {
+            @include font-work-sans($size: 16px, $lh: 1.4);
+        }
+    }
+}
+.img-hero {
+    grid-area: img-hero;
+    width: 100%;
+
+    @include _600 {
+        margin-bottom: 40px;
+    }
+
+    // .img-hero__image
+
+    &__image {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    // .img-hero__wrapper
+
+    &__wrapper {
+        padding: 22px 20px;
+        background-color: $background-color_1;
+        border-bottom-left-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+    }
+
+    // .img-hero__title
+
+    &__title {
+        @include font-work-sans(22px, $main-color-text, 600, 1.4);
+        margin-bottom: 10px;
+    }
+
+    // .img-hero__avatar-box
+
+    &__avatar-box {
+        @include d-flex($align: center, $col-gap: 12px);
+        @include font-work-sans(16px, $main-color-text, 400, 1.4);
+    }
+}
