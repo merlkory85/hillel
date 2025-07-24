@@ -8,6 +8,10 @@
 
     &__top {
         border-bottom: 1px solid $text-color_2;
+
+        @include _850 {
+            padding-bottom: 30px;
+        }
     }
 
     // .footer__top-body
@@ -71,9 +75,6 @@
 
     &__top-digest-form {
         display: flex;
-        @include _979 {
-            padding-bottom: 49px;
-        }
 
         @include _480 {
             display: flex;
@@ -189,9 +190,13 @@
             padding-right: 60px;
         }
 
-        @include _480 {
-            padding: 19px 20px;
+        @include _768 {
+            padding: 12px 20px;
         }
+
+        // @include _480 {
+        //     padding: 19px 20px;
+        // }
     }
 
     // .digest__info-btn
@@ -200,6 +205,10 @@
         @include _979 {
             padding: 19px 50px;
             margin-left: -32px;
+        }
+
+        @include _768 {
+            padding: 12px 20px;
         }
 
         @include _480 {

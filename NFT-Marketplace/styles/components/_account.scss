@@ -1,0 +1,120 @@
+@import "../variables";
+@import "../mixins";
+
+.account {
+    // .account__body
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 60px;
+
+        @include _979 {
+            display: flex;
+            column-gap: 40px;
+        }
+
+        @include _850 {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    // .account__img-inner
+
+    &__img-inner {
+        height: 100%;
+        width: 100%;
+    }
+
+    &__img {
+        height: 100%;
+        width: 100%;
+    }
+
+    // .account__info-wrap
+
+    &__info-wrap {
+        @include _850 {
+            padding: 30px 0px 40px 0px;
+        }
+    }
+
+    // .account__info-inner
+
+    &__info-inner {
+    }
+
+    // .account__info-title
+
+    &__info-title {
+        @include font-work-sans(51px, $main-color-text, 600, 1.1);
+        margin-bottom: 20px;
+
+        @include _979 {
+            @include font-work-sans(38px, $main-color-text, 600, 1.2);
+        }
+    }
+
+    // .account__info-subtitle
+
+    &__info-subtitle {
+        @include font-work-sans(22px, $main-color-text, 400, 1.6);
+        margin-bottom: 40px;
+
+        @include _979 {
+            @include font-work-sans(16px, $main-color-text, 400, 1.4);
+        }
+    }
+
+    // .account__info-form
+
+    &__info-form {
+        display: flex;
+        flex-direction: column;
+        max-width: 330px;
+    }
+
+    &__info-label {
+        position: relative;
+    }
+
+    // .account__info-input
+
+    &__info-input {
+        @include placeholder($main-color, 16px, 400);
+        width: 100%;
+        background-color: $main-color-text;
+        padding: 12px 20px 12px 52px;
+        border-radius: 20px;
+        color: $main-color;
+
+        &:last-child {
+            margin-bottom: 15px;
+        }
+    }
+
+    // .account__info-btn
+
+    &__info-btn {
+        padding: 12px 0;
+        margin-top: 15px;
+    }
+}
+.icon-name,
+.icon-email,
+.icon-password  {
+    fill: inherit;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    z-index: 15;
+    top: 12px;
+    left: 20px;
+}
+
+.footer-mail {
+    height: 20px;
+    width: 20px;
+}

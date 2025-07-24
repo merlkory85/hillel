@@ -14,7 +14,7 @@
       <header class="header">
         <div class="container-xl">
           <div class="header__body">
-            <a href="#" class="logo__wrap">
+            <a href="index.html" class="logo__wrap">
               <picture>
                 <source media="(min-width: 768px)" srcset="./img/logo-large.png" />
                 <source media="(max-width: 767px)" srcset="./img/logo-small.png" />
@@ -39,10 +39,10 @@
                 </li>
 
                 <li class="nav-header__item">
-                  <a href="#" class="nav-header__link">Connect a wallet</a>
+                  <a href="#" class="nav-header__link" onclick="location.href='wallet.html'">Connect a wallet</a>
                 </li>
 
-                <button class="nav-header__btn btn" onclick="location.href='index.html'">
+                <button class="nav-header__btn btn">
                   <svg class="icon-user">
                     <use xlink:href="./sprite.svg#User"></use>
                   </svg>
@@ -55,9 +55,57 @@
       </header>
 
       <main class="main">
-        <div class="container">
-          <h1 class="title">Create Account</h1>
-        </div>
+        <section class="account">
+          <div class="container">
+            <div class="account__body">
+              <div class="account__img-inner">
+                <img src="./img/account-img.png" alt="img" class="account__img">
+              </div>
+
+              <div class="account__info-wrap">
+                <div class="account__info-inner">
+                  <h2 class="account__info-title">Create Account</h2>
+                  <p class="account__info-subtitle">Welcome! Enter Your Details And Start Creating, Collecting And
+                    Selling NFTs.</p>
+                </div>
+
+                <form class="account__info-form ">
+                  <label for="name" class="account__info-label">
+                    <svg class="icon-name">
+                      <use xlink:href="./sprite.svg#User"></use>
+                    </svg>
+                    <input type="text" name="name" id="name" class="account__info-input" placeholder="Username">
+                  </label>
+
+                  <label for="email" class="account__info-label">
+                    <svg class="icon-email account-email">
+                      <use xlink:href="sprite.svg#EnvelopeSimple"></use>
+                    </svg>
+                    <input type="email" name="email" id="email" class="account__info-input" placeholder="Email Address">
+                  </label>
+
+                  <label for="password" class="account__info-label">
+                    <svg class="icon-password">
+                      <use xlink:href="./sprite.svg#LockKey"></use>
+                    </svg>
+                    <input type="password" name="password" id="password" class="account__info-input"
+                      placeholder="Password">
+                  </label>
+
+                  <label for="confirm-password" class="account__info-label">
+                    <svg class="icon-password">
+                      <use xlink:href="./sprite.svg#LockKey"></use>
+                    </svg>
+                    <input type="password" name="confirm-password" id="confirm-password" class="account__info-input"
+                      placeholder="Confirm Password">
+                  </label>
+
+                  <button class="account__info-btn btn" type="submit">Create account</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
 
       <footer class="footer">
@@ -138,7 +186,7 @@
                 <form action="" method="get" class="footer__top-digest-form">
                   <input type="email" name="" id="" placeholder="Enter your email here" class="digest__info-input">
                   <button class="digest__info-btn btn footer-btn">
-                    <svg class="icon-email footer-email">
+                    <svg class="icon-mail footer-mail">
                       <use xlink:href="sprite.svg#EnvelopeSimple"></use>
                     </svg>
                     <span class="digest__info-btn-text">Subscribe</span>
